@@ -176,7 +176,7 @@ code {
     }
     .mobile-menu.vis {
         visibility: visible;
-        z-index: 1;
+        z-index: 1050;
         left: calc(100% - 400px);
     }
 
@@ -204,6 +204,7 @@ code {
     }
     .menu-backdrop.vis {
         visibility: visible;
+        z-index: 1040;
         background-color: rgba(0, 0, 0, 0.5);
     }
 
@@ -218,8 +219,8 @@ code {
         left: 0;
         width: 100%;
         font-size: 30px;
-        background-color: #B55B5B;
         background-color: #A80000;
+        z-index: 1000;
     }
     #menu-button {
         cursor: pointer;
