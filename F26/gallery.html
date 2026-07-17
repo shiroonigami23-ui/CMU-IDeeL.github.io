@@ -462,6 +462,24 @@
             gap: 8px;
             align-items: center;
         }
+        @media (max-width: 768px) {
+            .selection-tray-item {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 12px;
+            }
+            .selection-tray-actions {
+                width: 100%;
+                justify-content: flex-start;
+            }
+            .selection-tray-actions .btn {
+                flex: 1;
+                text-align: center;
+            }
+            .selection-tray-title {
+                font-size: 1.25em;
+            }
+        }
     </style>
 </head>
 
@@ -657,7 +675,7 @@
                 <!-- SELECTION TRAY (Visible only when topics are selected) -->
                 <div v-if="selectedProjects.length > 0" class="selection-tray-card">
                     <h3 class="selection-tray-title">
-                        <i class="fas fa-star" style="color: #FFD700;"></i> Your Selected Project Application Drafts ({{ selectedProjects.length }})
+                        <i class="fas fa-star" style="color: #FFD700;"></i> Selected Project Drafts ({{ selectedProjects.length }})
                     </h3>
                     <p style="font-size: 0.95em; color: #555; line-height: 1.5; margin-bottom: 15px;">
                         You have prioritized the following topics. To finalize your application, you must fill out the official Google Form <strong>for each project</strong> you want to pursue. Click the <strong>Copy Title & Apply</strong> button next to a project below; it will copy the exact title to your clipboard and open the application form in a new tab.
@@ -769,14 +787,14 @@
         <!-- SECTION 2: APPLICATION FORM & INSTRUCTIONS -->
         <div class="row" id="apply">
             <div class="col-xs-12">
-                <h2 class="section-header-red"><i class="fas fa-paper-plane"></i> Project Applications & Proposal Submissions</h2>
+                <h2 class="section-header-red"><i class="fas fa-paper-plane"></i> Project Applications</h2>
                 
                 <div class="project-card" style="border-left: 4px solid #A80000; padding: 30px; background-color: #fff;">
                     <h3 style="color: #A80000; margin-top: 0; margin-bottom: 15px; font-weight: bold;">
-                        <i class="fab fa-google"></i> Submit Your Project Proposal
+                        <i class="fab fa-google"></i> Submit Project Application
                     </h3>
                     <p style="font-size: 1.05em; line-height: 1.6; color: #333; margin-bottom: 20px;">
-                        All student groups and individual applicants for <strong>11-785</strong> and <strong>11-685</strong> must register their project proposal, team members, and preferred project categories. 
+                        All student groups and individual applicants for <strong>11-785</strong> and <strong>11-685</strong> must register their project application, team members, and preferred project categories. 
                         Submissions are handled exclusively through our official Google Forms portal.
                     </p>
 
@@ -787,7 +805,7 @@
                     </div>
 
                     <div style="background-color: #fcfcfc; border: 1px solid #eee; padding: 20px; border-radius: 6px; margin-top: 25px;">
-                        <h4 style="color: #b05145; font-weight: bold; margin-top: 0; margin-bottom: 15px;"><i class="fas fa-clipboard-list"></i> What You Need for Submission:</h4>
+                        <h4 style="color: #b05145; font-weight: bold; margin-top: 0; margin-bottom: 15px;"><i class="fas fa-clipboard-list"></i> What You Need for Application:</h4>
                         <div class="row">
                             <div class="col-md-6">
                                 <ul style="padding-left: 20px; margin-bottom: 0; line-height: 1.7;">
@@ -798,7 +816,7 @@
                             </div>
                             <div class="col-md-6">
                                 <ul style="padding-left: 20px; margin-bottom: 0; line-height: 1.7;">
-                                    <li><b>Project Proposal Statement:</b> A comprehensive paragraph detailing your target model, datasets, and scientific objectives.</li>
+                                    <li><b>Project Application Statement:</b> A comprehensive paragraph detailing your target model, datasets, and scientific objectives.</li>
                                     <li><b>Supporting Links:</b> Relevant GitHub repositories, pre-existing research references, or personal portfolios.</li>
                                     <li><b>Compute Requests:</b> Details if requesting additional AWS, GCP, or PSC credits.</li>
                                 </ul>
